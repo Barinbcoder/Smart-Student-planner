@@ -1,0 +1,117 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  margin: 0;
+  background-color: red;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+  margin: 0;
+}
+
+/* ADD TASK */
+.add-task {
+  display: flex;
+  gap: 10px;
+  padding: 20px 40px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #5848e5;
+}
+
+/* TASK LIST */
+#taskList {
+  list-style: none;
+  padding: 0 40px;
+}
+
+/* TASK CARD */
+li {
+  background: white;
+  margin: 12px 0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+li:hover {
+  transform: translateY(-2px);
+}
+
+/* COMPLETED */
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transform: scale(0.98);
+  background: #e6f9ed;
+}
+
+/* ANIMATION */
+li.checking {
+  animation: checkPop 0.3s ease;
+}
+
+@keyframes checkPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(0.98); }
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark header {
+  background: #1e1e1e;
+}
+
+.dark li {
+  background: #1e1e1e;
+}
+
+.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
